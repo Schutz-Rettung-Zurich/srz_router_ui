@@ -1,10 +1,13 @@
 .App {
-  text-align: center;
+  text-align: left;
+  background: #040c1f;
+  height:auto;
 }
 
 .App-logo {
-  height: 20vmin;
+  width: 750px;
   pointer-events: none;
+  position: relative;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,19 +17,65 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 20vh;
+  background: #97f51cfe;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
+  padding-left: 50px;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #1606fb;
 }
+
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(5px + 1vmin);
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 50px;
+}
+
+.App-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(5px + 2vmin);
+  background: #4c4949fe;
+  color: white;
+}
+
+.App-box {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4c4949fe;
+  color: aliceblue;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 18px;
+  
+}
+
+.green {
+  color: greenyellow;
+}
+
+.lightblue {
+  color: rgb(47, 213, 255);
+}
+
+.orange {
+  color: rgb(255, 213, 47);
+}
+
 
 @keyframes App-logo-spin {
   from {

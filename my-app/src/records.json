@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Nüssli-Bärtsch",
+        "vorname": "Marina",
+        "Geschlecht": [
+            {
+                "name": "Weiblich"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Nüssli",
+        "vorname": "Lena",
+        "Geschlecht": [
+            {
+                "name": "Weiblich"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Nüssli",
+        "vorname": "Fabio",
+        "Geschlecht": [
+            {
+                "name": "Männlich"
+            }
+        ]
+    }
+]
