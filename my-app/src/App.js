@@ -51,7 +51,7 @@ function App() {
       </details>
       </body>
       <footer className="App-footer">
-        2022 NUC
+        2022 chnuessli.ch
       </footer>
     </div>
   );
