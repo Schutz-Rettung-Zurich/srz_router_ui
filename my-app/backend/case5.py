@@ -1,19 +1,19 @@
 import requests
 import pandas as pd
 import json
-import csv 
+import csv
 
-# Case 1: Standard Routing from Triemli to Schmiede Wiedikon
+#Case 5: Standard through Affoltern am Albis
 url = "https://apps.rescuetrack.com/api/routing/standard/v2/point-to-point"
 
 payload = json.dumps({
   "start": [
-    47.36629,
-    8.49707
+    47.281295,
+    8.454321
   ],
   "stop": [
-    47.37015,
-    8.519277
+    47.272287,
+    8.439255
   ]
 })
 headers = {
@@ -26,20 +26,20 @@ response = requests.request("POST", url, headers=headers, data=payload)
 pretty_json = json.loads(response.text)
 print (json.dumps(pretty_json, indent=2))
 
-with open('case1_standard.json', 'w', encoding='utf-8') as outfile:
+with open('data/case5_standard.json', 'w', encoding='utf-8') as outfile:
     json.dump(pretty_json, outfile, ensure_ascii=False, indent=4)
-    
-# Case 1: Emergency Routing from Triemli to Schmiede Wiedikon
+
+#Case 5: Emergency through Affoltern am Albis
 url = "https://apps.rescuetrack.com/api/routing/emergency/v2/point-to-point"
 
 payload = json.dumps({
   "start": [
-    47.36629,
-    8.49707
+    47.281295,
+    8.454321
   ],
   "stop": [
-    47.37015,
-    8.519277
+    47.272287,
+    8.439255
   ]
 })
 headers = {
@@ -52,21 +52,5 @@ response = requests.request("POST", url, headers=headers, data=payload)
 pretty_json = json.loads(response.text)
 print (json.dumps(pretty_json, indent=2))
 
-with open('case1_emergency.json', 'w', encoding='utf-8') as outfile:
+with open('data/case5_emergency.json', 'w', encoding='utf-8') as outfile:
     json.dump(pretty_json, outfile, ensure_ascii=False, indent=4)
-
-
-# Merge JSON Files
-
-files=['case1_standard.json', 'case1_emergency.json']
-
-def merge_JsonFiles(filename):
-    result = list()
-    for f1 in filename:
-        with open(f1, 'r') as infile:
-            result.append(json.load(infile))
-
-    with open('case1.json', 'w') as output_file:
-        json.dump(result, output_file, indent=4)
-
-merge_JsonFiles(files)
