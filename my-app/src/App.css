@@ -17,13 +17,12 @@
 }
 
 .App-header {
-  background: #97f51cfe;
+  background: #212729;
   display: flex;
-  flex-direction: column;
   align-items: left;
   justify-content: left;
   font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
+  color: aliceblue;
   padding-left: 50px;
   width: 100%;
 }
@@ -55,10 +54,9 @@
 }
 
 .App-box-standard {
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #043615fe;
+  background-color: #212729;
   color: aliceblue;
   padding: 50px;
   margin: 20px;
@@ -66,7 +64,6 @@
 }
 
 .App-box-emergency {
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #03386dfe;
@@ -88,6 +85,12 @@
   color: rgb(255, 213, 47);
 }
 
+.container-App {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
 
 @keyframes App-logo-spin {
   from {
