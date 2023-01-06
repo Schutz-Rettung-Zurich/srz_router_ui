@@ -6,6 +6,14 @@ import Case1Emergency from './json/case1_emergency.json';
 function App() {
   return (
     <div className="App">
+      <head>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+      </head>
       <header className="App-header">
         <h1>SRZ Router Testing</h1>
       </header>
@@ -23,8 +31,14 @@ function App() {
                 <strong>Reisezeit:<i className="lightblue"> { record.traveltime }</i></strong>
                 <br></br>
                 <strong>Routen-ID:<i className="orange"> { record.route }</i></strong>
-                <div className="map">
-                  
+                <div className="map" id="map">
+                  <script>
+                  var map = L.map('map').setView([51.505, -0.09], 13);
+                  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+                  </script>
                 </div>
               </div>
             )

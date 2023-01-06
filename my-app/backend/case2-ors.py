@@ -3,17 +3,17 @@ import pandas as pd
 import json
 import geojson
 
-# Case 1: Standard Routing from Triemli to Schmiede Wiedikon
+# Case 2: Standard Routing through Bellevue
 url = "https://api.openrouteservice.org/v2/directions/driving-car/geojson"
 payload = json.dumps({
   "coordinates": [
     [
-      8.49707,
-      47.36629
+      8.541671,
+      47.366469
     ],
     [
-      8.519277,
-      47.37015
+      8.546296,
+      47.367954
     ]
   ]
 })
@@ -27,5 +27,5 @@ response = requests.request("POST", url, headers=headers, data=payload)
 pretty_json = json.loads(response.text)
 print (json.dumps(pretty_json, indent=2))
 
-with open('./src/json/case1_ors.geojson', 'w', encoding='utf-8') as outfile:
+with open('./src/json/case2_ors.geojson', 'w', encoding='utf-8') as outfile:
     json.dump(pretty_json, outfile, ensure_ascii=False, indent=4)
