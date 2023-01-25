@@ -626,7 +626,7 @@
     "metadata": {
         "attribution": "openrouteservice.org | OpenStreetMap contributors",
         "service": "routing",
-        "timestamp": 1672995159716,
+        "timestamp": 1674648445472,
         "query": {
             "coordinates": [
                 [
@@ -644,7 +644,7 @@
         "engine": {
             "version": "6.8.0",
             "build_date": "2022-10-21T14:34:31Z",
-            "graph_date": "2022-12-29T21:41:22Z"
+            "graph_date": "2023-01-09T22:35:10Z"
         }
     }
 }

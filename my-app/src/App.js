@@ -1,4 +1,5 @@
 import './App.css';
+//import Map from "./components/Map/Map";
 import Case1Standard from './json/case1_standard.json';
 import Case1Emergency from './json/case1_emergency.json';
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>SRZ Router Testing</h1>
+        <h1>SRZ Router Comparison Tool</h1>
       </header>
       <body className="container-App">
         <div className="App-body">
@@ -23,7 +24,7 @@ function App() {
                 <strong>Reisezeit:<i className="lightblue"> { record.traveltime }</i></strong>
                 <br></br>
                 <strong>Routen-ID:<i className="orange"> { record.route }</i></strong>
-                <div className="map">
+                <div className="Map">
                   <script>
                     
                   </script>
