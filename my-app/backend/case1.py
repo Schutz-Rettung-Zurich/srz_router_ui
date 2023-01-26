@@ -22,12 +22,15 @@ headers = {
 }
 
 response = requests.request("POST", url, headers=headers, data=payload)
-
 pretty_json = json.loads(response.text)
+
+my_array = []
+my_array.append(pretty_json)
+
 print (json.dumps(pretty_json, indent=2))
 
 with open('./src/json/case1_standard.json', 'w', encoding='utf-8') as outfile:
-    json.dump(pretty_json, outfile, ensure_ascii=False, indent=4)
+    json.dump(my_array, outfile, ensure_ascii=False, indent=4)
     
 # Case 1: Emergency Routing from Triemli to Schmiede Wiedikon
 url = "https://apps.rescuetrack.com/api/routing/emergency/v2/point-to-point"
@@ -48,10 +51,14 @@ headers = {
 }
 
 response = requests.request("POST", url, headers=headers, data=payload)
-
 pretty_json = json.loads(response.text)
+
+my_array = []
+
+my_array.append(pretty_json)
+
 print (json.dumps(pretty_json, indent=2))
 
 with open('./src/json/case1_emergency.json', 'w', encoding='utf-8') as outfile:
-    json.dump(pretty_json, outfile, ensure_ascii=False, indent=4)
+    json.dump(my_array, outfile, ensure_ascii=False, indent=4)
 
