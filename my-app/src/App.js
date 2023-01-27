@@ -1,4 +1,5 @@
 import './App.css';
+import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet'
 //import Map from "./components/Map/Map";
 import Case1Standard from './json/case1_standard.json';
 import Case1Emergency from './json/case1_emergency.json';
@@ -36,11 +37,6 @@ function App() {
                 <br></br>
                 <strong>Reisezeit:<i className="lightblue"> { record.traveltime }</i></strong>
                 <br></br>
-                <div className="Map">
-                  <script>
-                    
-                  </script>
-                </div>
               </div>
             )
           })
@@ -62,6 +58,18 @@ function App() {
             )
           })
         }
+        <div className="Map">
+        return (
+        <MapContainer id='map' center={[47.39595583, 8.637702055]} zoom={11} scrollWheelZoom={true}>
+        <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://tile.osm.ch/osm-swiss-style/{z}/{x}/{y}.png"
+        />
+        <GeoJSON data={'./src/json/case1_ors.geojson'} />
+        </MapContainer>
+        );
+        </div>
+
         <h2>Testfall 2 - Bellevue</h2>
         {
           Case2Standard && Case2Standard.map( record => {
