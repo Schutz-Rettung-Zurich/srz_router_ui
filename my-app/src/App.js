@@ -58,6 +58,7 @@ function App() {
             )
           })
         }
+        {/*
         <div className="Map">
         return (
         <MapContainer id='map' center={[47.39595583, 8.637702055]} zoom={11} scrollWheelZoom={true}>
@@ -69,7 +70,7 @@ function App() {
         </MapContainer>
         );
         </div>
-
+        */}
         <h2>Testfall 2 - Bellevue</h2>
         {
           Case2Standard && Case2Standard.map( record => {
